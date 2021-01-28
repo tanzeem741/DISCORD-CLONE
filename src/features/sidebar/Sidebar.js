@@ -9,6 +9,7 @@ import AddIcon from '@material-ui/icons/Add';
 import { selectUser } from '../userSlice';
 import db, { auth } from '../firebase';
 import { setChannel } from '../channelSlice';
+import { Tooltip } from '@material-ui/core';
 
 function Sidebar() {
     const dispatch = useDispatch();
@@ -58,7 +59,9 @@ function Sidebar() {
                 
             </div>
             <div className="sidebar__bottom sidebar__bottom--bg">
-                <Avatar src={user.photo} onClick={() => (auth.signOut())}/>
+                <Tooltip title="Logout">
+                <Avatar src={user.photo} onClick={() => (auth.signOut())} />
+                </Tooltip>
                 <div className="sidebar__user">
                     <h4>{user.displayName}</h4>
                     <p>#{user.uid.substring(0,4)}</p>
