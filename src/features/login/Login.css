@@ -1,0 +1,31 @@
+.login{
+    height:100vh;
+    width:100%;
+    background:#7289d9;
+    display:grid;
+    place-items: center;
+}
+.login__image{
+    width:500px;
+    object-fit: contain;
+}
+.login__button{
+    text-align:center;
+    border: none;
+    background: #fff;
+    padding: 10px 67px;
+    color: #7289d9;
+    font-weight: 800;
+    font-size: 20px;
+    outline:none;
+    cursor:pointer;
+    border-radius:2px;
+}
+.login__button:hover{
+    background:#000;
+}
+@media (max-width:500px){
+    .login__image{
+        width:250px;
+    }
+}
